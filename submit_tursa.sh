@@ -12,7 +12,7 @@
 #SBATCH --gres gpu:4
 #SBATCH --output %x.%j.out
 #SBATCH --error %x.%j.err
-#SBATCH --reservation [tbc]
+#SBATCH --reservation workshop
 umask 0002
 
 module purge
