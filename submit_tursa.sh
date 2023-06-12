@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name NAME
-#SBATCH --qos standard
+#SBATCH --qos reservation    # make this "standard" for production jobs
 #SBATCH --time 10:00
 #SBATCH --account PROJECT
 #SBATCH --nodes NUM_NODES
@@ -12,7 +12,7 @@
 #SBATCH --gres gpu:4
 #SBATCH --output %x.%j.out
 #SBATCH --error %x.%j.err
-#SBATCH --reservation workshop
+#SBATCH --reservation workshop   # remove this line for production jobs
 umask 0002
 
 module purge
